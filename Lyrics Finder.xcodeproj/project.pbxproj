@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E86693B9F946210AC42E606 /* Pods_Lyrics_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC9A41B01C251F5453B09FFD /* Pods_Lyrics_Finder.framework */; };
 		5B25A0122110A9420063A31C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25A0112110A9420063A31C /* AppDelegate.swift */; };
 		5B25A0142110A9420063A31C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25A0132110A9420063A31C /* ViewController.swift */; };
 		5B25A0172110A9420063A31C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B25A0152110A9420063A31C /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		5B25A0182110A9440063A31C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B25A01B2110A9440063A31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B25A01D2110A9440063A31C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B8F096CEEB4CDA205E1F3C8 /* Pods-Lyrics Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyrics Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lyrics Finder/Pods-Lyrics Finder.release.xcconfig"; sourceTree = "<group>"; };
+		D56EFD9B15E27F0AB6D1473A /* Pods-Lyrics Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lyrics Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lyrics Finder/Pods-Lyrics Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		FC9A41B01C251F5453B09FFD /* Pods_Lyrics_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lyrics_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E86693B9F946210AC42E606 /* Pods_Lyrics_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B43739787CD3B02C2204F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC9A41B01C251F5453B09FFD /* Pods_Lyrics_Finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B25A0052110A9420063A31C = {
 			isa = PBXGroup;
 			children = (
 				5B25A0102110A9420063A31C /* Lyrics Finder */,
 				5B25A00F2110A9420063A31C /* Products */,
+				FB8ADFCCBDBFE1A0EE837EDB /* Pods */,
+				30B43739787CD3B02C2204F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "Lyrics Finder";
 			sourceTree = "<group>";
 		};
+		FB8ADFCCBDBFE1A0EE837EDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D56EFD9B15E27F0AB6D1473A /* Pods-Lyrics Finder.debug.xcconfig */,
+				7B8F096CEEB4CDA205E1F3C8 /* Pods-Lyrics Finder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B25A0202110A9440063A31C /* Build configuration list for PBXNativeTarget "Lyrics Finder" */;
 			buildPhases = (
+				C3A8971388792F0875DCD697 /* [CP] Check Pods Manifest.lock */,
 				5B25A00A2110A9420063A31C /* Sources */,
 				5B25A00B2110A9420063A31C /* Frameworks */,
 				5B25A00C2110A9420063A31C /* Resources */,
+				0A684C7A713603ABCF95276D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A684C7A713603ABCF95276D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lyrics Finder/Pods-Lyrics Finder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lyrics Finder/Pods-Lyrics Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A8971388792F0875DCD697 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lyrics Finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B25A00A2110A9420063A31C /* Sources */ = {
@@ -278,6 +347,7 @@
 		};
 		5B25A0212110A9440063A31C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D56EFD9B15E27F0AB6D1473A /* Pods-Lyrics Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +365,7 @@
 		};
 		5B25A0222110A9440063A31C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8F096CEEB4CDA205E1F3C8 /* Pods-Lyrics Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

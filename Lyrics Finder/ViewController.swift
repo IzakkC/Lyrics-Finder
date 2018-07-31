@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -27,7 +29,31 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
+        artistNameTextField.resignFirstResponder()
+        songNameTextField.resignFirstResponder()
+        
+        guard let artistName = artistNameTextField.text, artistName != "", let songTitle = songNameTextField.text, songTitle != "" else {
+            return
+        }
+        artistNameTextField.text = ""
+        songNameTextField.text = ""
+        
+        let artistNameURLComponent = artistName.replacingOccurrences(of: " ", with: "+")
+        let songTitleURLComponent = songTitle.replacingOccurrences(of: " ", with: "+")
+        
+        let fullURL = baseURL + artistNameURLComponent + "/" + songTitleURLComponent
+        
+        
+        Alamofire.request(fullURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.lyricsTextField.text = json["lyrics"].stringValue
+            case .failure(let error):
+                self.lyricsTextField.text = "Invalid selection entered ot an error occured. Please try again."
+                print(error)
+            }
+        }
     }
-    
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,77 +15,82 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lyrics_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lyrics Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nZ-eh-diX">
-                                <rect key="frame" x="16" y="40" width="343" height="31.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="64" width="343" height="20"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-Tv-Xbq">
-                                <rect key="frame" x="16" y="155.5" width="343" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Artist Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-Tv-Xbq" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="104" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.22832533059999999" green="0.31036665089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Enter an title and artist to get the lyrics" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bD-Lo-O5l">
-                                <rect key="frame" x="0.0" y="327.5" width="375" height="339.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="236" width="375" height="460"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="Wao-PV-QPg"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="949-Iy-co7">
-                                <rect key="frame" x="16" y="126.5" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiT-Dk-rJm">
-                                <rect key="frame" x="16" y="196.5" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2i-yh-98b">
-                                <rect key="frame" x="16" y="225.5" width="343" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2i-yh-98b" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="150" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.22832533059999999" green="0.31036665089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-di-j5v">
-                                <rect key="frame" x="16" y="271.5" width="343" height="30"/>
-                                <state key="normal" title="Submit"/>
+                                <rect key="frame" x="140" y="196" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.22832533059999999" green="0.31036665089999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1u4-xW-if5"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99351091418161008" green="1" blue="0.9743251427310814" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0sE-FI-bkD"/>
-                            <constraint firstItem="rmb-Tv-Xbq" firstAttribute="top" secondItem="949-Iy-co7" secondAttribute="bottom" constant="8" id="0vQ-Ix-Uz2"/>
-                            <constraint firstItem="6nZ-eh-diX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Cm-ZB-lAS"/>
-                            <constraint firstItem="949-Iy-co7" firstAttribute="top" secondItem="6nZ-eh-diX" secondAttribute="bottom" constant="55" id="Ba2-zi-V3c"/>
-                            <constraint firstItem="wiT-Dk-rJm" firstAttribute="top" secondItem="rmb-Tv-Xbq" secondAttribute="bottom" constant="20" id="BuJ-De-qcy"/>
-                            <constraint firstItem="O2i-yh-98b" firstAttribute="top" secondItem="wiT-Dk-rJm" secondAttribute="bottom" constant="8" id="D34-qk-ZeX"/>
-                            <constraint firstItem="wiT-Dk-rJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lj2-cI-FnL"/>
-                            <constraint firstItem="Odr-di-j5v" firstAttribute="top" secondItem="O2i-yh-98b" secondAttribute="bottom" constant="25" id="Lqq-HL-QgZ"/>
-                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Msf-Mu-Q4q"/>
-                            <constraint firstItem="Odr-di-j5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="On9-yM-CFG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmb-Tv-Xbq" secondAttribute="trailing" constant="16" id="QQK-Hf-fWg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wiT-Dk-rJm" secondAttribute="trailing" constant="16" id="Rkb-LP-Mhn"/>
-                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="top" secondItem="Odr-di-j5v" secondAttribute="bottom" constant="26" id="TuK-KN-bvH"/>
-                            <constraint firstItem="6nZ-eh-diX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="b8A-te-heO"/>
-                            <constraint firstItem="rmb-Tv-Xbq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d09-Fw-pWV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6nZ-eh-diX" secondAttribute="trailing" constant="16" id="fCa-3V-Cp3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Odr-di-j5v" secondAttribute="trailing" constant="16" id="k5I-vY-wv8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="949-Iy-co7" secondAttribute="trailing" constant="16" id="lkY-K1-9mR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O2i-yh-98b" secondAttribute="trailing" constant="16" id="ugp-5F-jQc"/>
-                            <constraint firstItem="O2i-yh-98b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vmF-S4-HzU"/>
-                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vsS-qK-mgT"/>
-                            <constraint firstItem="949-Iy-co7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zCr-jG-Aw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O2i-yh-98b" secondAttribute="trailing" constant="16" id="3v2-7k-VdR"/>
+                            <constraint firstItem="Odr-di-j5v" firstAttribute="top" secondItem="O2i-yh-98b" secondAttribute="bottom" constant="16" id="7RK-wK-dYg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Odr-di-j5v" secondAttribute="trailing" constant="140" id="L2C-PS-42L"/>
+                            <constraint firstItem="6nZ-eh-diX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="McO-pu-l0I"/>
+                            <constraint firstItem="6nZ-eh-diX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Vf3-wt-W1P"/>
+                            <constraint firstItem="O2i-yh-98b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XrS-Oc-Ycx"/>
+                            <constraint firstItem="O2i-yh-98b" firstAttribute="top" secondItem="rmb-Tv-Xbq" secondAttribute="bottom" constant="16" id="Ysf-yZ-Rzr"/>
+                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="top" secondItem="Odr-di-j5v" secondAttribute="bottom" constant="10" id="aBZ-r5-VPS"/>
+                            <constraint firstItem="rmb-Tv-Xbq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dfb-aj-BCg"/>
+                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fwY-fc-KEB"/>
+                            <constraint firstItem="5bD-Lo-O5l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ngM-Iz-epM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rmb-Tv-Xbq" secondAttribute="trailing" constant="16" id="oK9-fT-Yk2"/>
+                            <constraint firstItem="rmb-Tv-Xbq" firstAttribute="top" secondItem="6nZ-eh-diX" secondAttribute="bottom" constant="20" id="rB8-Zj-m6e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6nZ-eh-diX" secondAttribute="trailing" constant="16" id="snA-zU-prC"/>
+                            <constraint firstItem="Odr-di-j5v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="xb1-FJ-RXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
